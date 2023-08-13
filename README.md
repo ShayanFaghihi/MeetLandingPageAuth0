@@ -15,7 +15,7 @@ MEET is a responsive React project that allows users to log in using Auth0 authe
 
 ## Demo
 
-[Link to the live demo]
+[Link to the live demo](https://shayan-meetapp.netlify.app/)
 
 ## Installation
 
