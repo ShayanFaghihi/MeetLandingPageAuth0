@@ -1,4 +1,5 @@
 import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 import logo from "../assets/logo.svg";
 import heroLeftImg from "../assets/desktop/image-hero-left.png";
@@ -6,6 +7,8 @@ import heroRightImg from "../assets/desktop/image-hero-right.png";
 import heroImg from "../assets/tablet/image-hero.png";
 
 const Header = () => {
+  const { loginWithRedirect } = useAuth0();
+
   return (
     <header>
       <div className="logo">
@@ -35,7 +38,11 @@ const Header = () => {
             <button className="purple" type="button">
               Download <span>v1.3</span>
             </button>
-            <button className="green" type="button">
+            <button
+              className="green"
+              type="button"
+              onClick={() => loginWithRedirect()}
+            >
               Sign In
             </button>
           </div>

@@ -1,24 +1,23 @@
 import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 
-import Header from "./components/Header";
-import Container from "./components/Container";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-import Separator from "./components/Separator";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
-  return (
-    <>
-      <Container>
-        <Header />
-        <Separator sectionNumber="01" />
-        <Main />
-        <Separator sectionNumber="02" />
-      </Container>
-      <Footer />
-    </>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 };
 
 export default App;

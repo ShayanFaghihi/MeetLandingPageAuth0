@@ -9,6 +9,10 @@ MEET is a responsive React project that allows users to log in using Auth0 authe
 - Styling using CSS, Flex, and Grid.
 - User data display with a logout option.
 
+## Screenshot
+
+![](./preview.jpg)
+
 ## Demo
 
 [Link to the live demo]
